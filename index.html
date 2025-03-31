@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Codex Archive</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Codex Archive</h1>
+  <div class="game-grid">
+    <div class="game-card">
+      <a href="mass-effect.html">
+        <img src="images/mass-effect.jpg" alt="Mass Effect">
+        <div class="game-title">Mass Effect</div>
+      </a>
+    </div>
+    <div class="game-card">
+      <a href="fallout.html">
+        <img src="images/fallout.jpg" alt="Fallout">
+        <div class="game-title">Fallout</div>
+      </a>
+    </div>
+    <div class="game-card">
+      <a href="dark-souls.html">
+        <img src="images/dark-souls.jpg" alt="Dark Souls">
+        <div class="game-title">Dark Souls</div>
+      </a>
+    </div>
+    <div class="game-card">
+      <a href="diablo.html">
+        <img src="images/diablo.jpg" alt="Diablo">
+        <div class="game-title">Diablo</div>
+      </a>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.classList.add('fade-in');
+      const links = document.querySelectorAll('a[href$=".html"]');
+      links.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+          event.preventDefault();
+          const href = this.getAttribute('href');
+          document.body.classList.add('fade-out');
+          setTimeout(function() {
+            window.location.href = href;
+          }, 500);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
