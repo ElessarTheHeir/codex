@@ -1,0 +1,17 @@
+
+body {
+  background-color: #111;
+  color: #eee;
+  font-family: sans-serif;
+  padding: 20px;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav li {
+  margin: 5px 0;
+}
+a {
+  color: #6cf;
+}
